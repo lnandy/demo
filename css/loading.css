@@ -1,0 +1,168 @@
+body {
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    background: #fff4e0;
+}
+.slide{
+	background: #c5e0dc;
+	width:100%;
+	height:400px;
+	position:relative;
+}
+.slide .mountain{
+    background: url(../image/loading/behind-mountains.png) no-repeat center;
+    top: 100px;
+    width: 100%;
+    height: 88px;
+    position: absolute;
+    z-index: 2;
+}
+.slide .trees{
+    background: url(../image/loading/behind-trees.png) no-repeat center;
+    top: 120px;
+    width: 100%;
+    height: 103px;
+    position: absolute;
+    z-index: 2;
+}
+.slide .foreground-trees{
+    background: url(../image/loading/foreground-trees.png) no-repeat center;
+    top: 150px;
+    width: 100%;
+    height: 264px;
+    position: absolute;
+    z-index: 4;
+}
+.slide .landscape{
+    background: url(../image/loading/landscape.png) no-repeat center;
+    top: 185px;
+    width: 100%;
+    height: 248px;
+    position: absolute;
+    z-index: 3;
+}
+.kai-running{
+    height: 257px;
+    position: absolute;
+    width: 180px;
+    left: 50%;
+    margin-left: -90px;
+    top: 110px;
+    z-index: 3;
+    transform: scale(0);
+    background: url(../image/loading/kai_running.png) no-repeat;
+    animation: animate 0.75s steps(19) infinite;
+ }
+.kai-running .eyes:after, .kai-running .eyes:before {
+  height: 8px;
+  width: 5px;
+  background: #1a181b;
+  top: 100px;
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+}
+.kai-running  .eyes:after {
+  right: 70px;
+}
+.kai-running  .eyes:before {
+  left: 70px;
+}
+.kai-running  .eyes {
+  position: relative;
+  animation: eyes_running .75s reverse infinite;
+}
+.kai-running .eyes:before, .kai-running .eyes:after {
+  animation: eyes_blink 5s .2s alternate infinite linear;
+}
+
+@keyframes animate {
+  to {
+    background-position: -3420px;
+  }
+}
+@keyframes eyes_blink {
+  0% {
+    height: 8px;
+    top: 100px;
+  }
+
+  10% {
+    height: 8px;
+    top: 100px;
+  }
+
+  11% {
+    height: 2px;
+    top: 103px;
+  }
+
+  13% {
+    height: 2px;
+    top: 103px;
+  }
+
+  14% {
+    height: 8px;
+    top: 100px;
+  }
+
+  30% {
+    height: 8px;
+    top: 100px;
+  }
+
+  34% {
+    height: 8px;
+    top: 100px;
+  }
+
+  36% {
+    height: 2px;
+    top: 103px;
+  }
+
+  38% {
+    height: 8px;
+    top: 100px;
+  }
+
+  40% {
+    height: 2px;
+    top: 103px;
+  }
+
+  42% {
+    height: 8px;
+    top: 100px;
+  }
+
+  99.9999% {
+    height: 8px;
+    top: 100px;
+  }
+}
+@keyframes eyes_running {
+  0% {
+    top: 20px;
+  }
+
+  22% {
+    top: 9px;
+  }
+
+  46% {
+    top: 17px;
+  }
+
+  72% {
+    top: 9px;
+  }
+
+  100% {
+    top: 20px;
+  }
+}

@@ -1,0 +1,13 @@
+html, body {
+	height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+}
+#myContentFrame{
+	height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    display:block;
+}
